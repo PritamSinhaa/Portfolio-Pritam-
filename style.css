@@ -107,8 +107,8 @@ section{
 }
 .home-image img:hover{
   box-shadow: 0 0 25px var(--main-color),
-              0 0 25px var(--main-color),
-              0 0 25px var(--main-color);  
+              0 0 50px var(--main-color),
+              0 0 100px var(--main-color);  
 }
 .social-icons a{
   display: inline-flex;
@@ -159,4 +159,204 @@ section{
   box-shadow: 0 0 25px var(--main-color);
   background-color: var(--main-color);
   color: black ;
+}
+.about{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+  background-color: var(--second-bg-color);
+}
+.about-img img{
+  width: 32vw;
+  border-radius: 50%;
+  box-shadow: 0 0 var(--main-color);
+  transition: 0.4s ease-in-out;
+}
+.about-img img:hover{
+  box-shadow: 0 0 25px var(--main-color),
+              0 0 50px var(--main-color),
+              0 0 100px var(--main-color); 
+}
+.about-content h2{
+  font-size: 7rem;
+  text-align: left;
+}
+.about-content p{
+  font-size: 1.8rem;
+}
+.about-content .btn{
+  margin: 3rem 0;;
+}
+
+::-webkit-scrollbar{
+  width: 20px;
+}
+::-webkit-scrollbar-thumb{
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-track{
+  background-color: var(--bg--color);
+}
+.heading{
+  text-align: center;
+  font-size: 7rem;
+  margin: 5rem 0;
+}
+.services{
+  background-color: var(--bg--color);
+  color: black;
+}
+.services h2{
+  color: var(--text-color);
+}
+.services-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  align-items: center;
+  gap: 2.5rem;
+}
+.service-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color);
+  height: 600px;
+  border-radius: 3rem;
+  cursor: pointer;
+  border: 5px solid transparent;
+  transition: 0.4s ease-in-out;
+}
+.service-box:hover{
+  background-color: var(--second-bg-color);
+  color: var(--main-color);
+  border: 5px solid var(--main-color);
+  transform: scale(1.03);
+  
+}
+.service-info{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem;
+}
+.service-box:hover svg {
+  fill: #00ff51;
+  transition: fill 0.3s ease;
+}
+
+.service-info h4{
+  font-size: 4rem;
+  margin: 2rem 0;
+  font-weight: 800;
+}
+.service-info p{
+  font-size: 1.4rem;
+  font-weight: 600;
+  line-height: 1.7;
+}
+.contact{
+  background-color: var(--second-bg-color);
+}
+.contact h2{
+  margin-bottom: 3rem;
+  color: var(--text-color);
+}
+.contact form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0;
+  text-align: center;
+}
+.contact form .input-box input, .contact form textarea{
+  width: 100%;
+  padding: 2.5rem;
+  font-size: 1.8rem;
+  color: var(--text-color);
+  background-color: var(--bg--color);
+  border-radius: 2rem;
+  border: 2px solid var(--main-color);
+  margin: 1.5rem;
+  resize: none;
+}
+.footer{
+  background-color: var(--bg--color);
+  padding: 30px 0;
+}
+.footer .social-icons{
+  text-align: center;
+}
+.footer ul{
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+.footer ul li{
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer ul li a{
+  color: white;
+  border-bottom: 3px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+.footer ul li a:hover{
+  border-bottom: 3px solid var(--main-color);
+}
+
+@media(max-width:1024px){
+  #menu-icon{
+    display: block;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 50%;
+    padding: 1rem 3rem;
+    background-color: rgba(0,0,0,0.8);
+    border-left: 2px solid var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+    border-bottom-left-radius: 2rem;
+    display: none;
+  }
+  .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+    color: var(--text-color);
+  }
+  .navbar.active{
+    display: block;
+  }
+  .home{
+    flex-direction: column-reverse;
+    margin: 5rem 0;
+    gap: 5rem;
+  }
+  .home-cotent{
+    align-items: center;
+    text-align: center;
+  }
+  .home-image img{
+    width: 52vw;
+  }
+  .about{
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .about h2{
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .about img{
+    width: 52vw;
+  }
+  .contact form{
+    flex-direction: column;
+  }
 }
